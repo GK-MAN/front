@@ -11,7 +11,7 @@ export class UserService {
     url = 'https://localhost:44319';
 
     getAll() {
-        return this.http.get<User[]>(`${url}/users`);
+        return this.http.get<User[]>(`${turl}/users`);
     }
 
     getById(id: number) {
