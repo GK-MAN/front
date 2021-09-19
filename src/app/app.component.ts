@@ -8,8 +8,10 @@ import { User, Role } from './_models';
 export class AppComponent {
     user: User;
 
-    constructor(private authenticationService: AuthenticationService) {
-        this.authenticationService.user.subscribe(x => this.user = x);
+    constructor(
+            private authenticationService: AuthenticationService
+        ) {
+        //this.authenticationService.user.subscribe(x => this.user = x);
     }
 
     get isAdmin() {
@@ -17,6 +19,6 @@ export class AppComponent {
     }
 
     logout() {
-        this.authenticationService.logout();
+        //this.authenticationService.logout();
     }
 }
