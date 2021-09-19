@@ -10,7 +10,7 @@ import { User } from './_models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    url = 'https://localhost:44319/api/Course';
+    url = 'https://localhost:44319';
 
     private userSubject: BehaviorSubject<User>;
     public user: Observable<User>;
@@ -28,7 +28,7 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<any>(`${url}/users/authenticate`, { username, password })
+        return this.http.post<any>(`${thisurl}/users/authenticate`, { username, password })
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));

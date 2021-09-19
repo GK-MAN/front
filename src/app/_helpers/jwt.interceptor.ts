@@ -8,7 +8,7 @@ import { AuthenticationService } from '../_services';
 export class JwtInterceptor implements HttpInterceptor {
     constructor(private authenticationService: AuthenticationService) { }
 
-    url='';
+    url='https://localhost:44319';
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // add auth header with jwt if user is logged in and request is to api url
