@@ -18,7 +18,7 @@ export class HomeComponent {
         /private userService: UserService,
         //private authenticationService: AuthenticationService
     ) {
-        //this.user = this.authenticationService.userValue;
+        this.user = this.authenticationService.userValue;
     }
 
     ngOnInit() {
