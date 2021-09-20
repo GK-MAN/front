@@ -11,7 +11,7 @@ export class AppComponent {
     constructor(
             private authenticationService: AuthenticationService
         ) {
-        //this.authenticationService.user.subscribe(x => this.user = x);
+        this.authenticationService.user.subscribe(x => this.user = x);
     }
 
     get isAdmin() {
@@ -19,6 +19,6 @@ export class AppComponent {
     }
 
     logout() {
-        //this.authenticationService.logout();
+        this.authenticationService.logout();
     }
 }
